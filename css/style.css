@@ -1,0 +1,398 @@
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.stylist-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+}
+
+.rose {
+    color: #fb5d61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* loader */
+#load {
+    height: 100vh;
+    width: 100%;
+    background-color: #fb5d61;
+    position: fixed;
+    z-index: 10;
+}
+
+.circles {
+    height: 100px;
+    position: relative;
+    width: 100px;
+
+    >div {
+        animation: growAndFade 2s infinite ease-out;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .circle1 {
+        animation-delay: 1s;
+    }
+
+    .circle2 {
+        animation-delay: 1.5s;
+    }
+
+    .circle3 {
+        animation-delay: 2s;
+    }
+}
+
+@keyframes growAndFade {
+    0% {
+        opacity: .25;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* navbar */
+
+.a-link:hover,
+.active {
+    color: #fb5d61 !important;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* home */
+
+.bg-left {
+    background: url('../images/top-left-bg.jpg');
+    height: 90vh;
+}
+
+.btn {
+    color: #fb5d61 !important;
+    background-color: #fff !important;
+    border-radius: 3px !important;
+}
+
+.carousel-img {
+    height: 90vh !important;
+}
+
+/* aboutus */
+
+.aboutus {
+    position: relative;
+    padding-left: 40px;
+}
+
+.aboutus::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background-color: #fb5849;
+}
+
+.img-thumb {
+    position: relative;
+}
+
+.videobtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    line-height: 70px;
+    text-align: center;
+    background-color: #fb5849;
+    color: #fff;
+    border-radius: 50%;
+    transform: translate(-35px, -35px);
+    transition: all .3s;
+}
+
+/* menu */
+
+#menu {
+    background-color: #fffafa;
+}
+
+.carousel-wrap {
+    margin: 90px auto;
+    padding: 0 5%;
+    width: 100%;
+    position: relative;
+}
+
+.owl-carousel .item {
+    position: relative;
+    z-index: 100;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.disabled {
+    display: block !important;
+}
+
+.owl-nav {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+
+.owl-nav i {
+    font-size: 30px;
+}
+
+.owl-nav .owl-prev {
+    left: -30px;
+    color: #fb5d61 !important;
+}
+
+.owl-nav .owl-next {
+    right: -30px;
+    color: #fb5d61 !important;
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.card1 {
+    background-image: url(../images/menu-item-01.jpg);
+}
+
+.card2 {
+    background-image: url(../images/menu-item-02.jpg);
+}
+
+.card3 {
+    background-image: url(../images/menu-item-03.jpg);
+}
+
+.card4 {
+    background-image: url(../images/menu-item-04.jpg);
+}
+
+.card5 {
+    background-image: url(../images/menu-item-05.jpg);
+}
+
+.price h6 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #fb5849;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: 35vh !important;
+    background-color: #fb5849;
+    border: 1px solid #fb5849;
+    top: 100%;
+    transition: .5s all ease-in-out;
+}
+
+.card:hover .info {
+    top: 58%;
+}
+
+/* chef */
+
+.chefcard {
+    position: relative;
+}
+
+.chefimage {
+    display: block;
+}
+
+.chefsocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    background-color: #2b2b2b;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.chefsocial div a:hover i {
+    transition: .3s all ease-in;
+    color: #fb5d61 !important;
+}
+
+.chefcard:hover .chefsocial {
+    transition: .3s all ease-in-out;
+    opacity: .80;
+}
+
+.chefcard:hover {
+    transition: .3s all ease-in-out;
+    border-color: #fb5d61 !important;
+}
+
+.chefcard:hover .cheftitle {
+    transition: .3s all ease-in-out;
+    color: #fb5d61 !important;
+}
+
+/* contactus */
+
+#contact {
+    background-image: url(../images/reservation-bg.jpg);
+    background-size: cover;
+}
+
+.contactus {
+    position: relative;
+    padding-left: 40px;
+}
+
+.contactus::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background-color: #fff;
+}
+
+.contactusicon {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: #fb5d61;
+    color: #fff;
+    border-radius: 50%;
+    top: -23%;
+    left: 35%;
+    line-height: 70px !important;
+}
+
+.form-btn {
+    background-color: #fb5d61 !important;
+    width: 100%;
+}
+
+/* weekmenu */
+
+.weekmenu-icon:hover {
+    cursor: pointer;
+}
+
+.weekmenu-price {
+    background-color: #fb5d61;
+}
+
+/* footer */
+
+.footer {
+    background-color: #fb5d61;
+}
+
+.footericon {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    color: #fb5d61;
+    border-radius: 50%;
+    line-height: 50px !important;
+}
+
+.footericon i {
+    margin-left: 18px;
+}
+
+.footericon .fa-facebook-f {
+    margin-left: 20px;
+}
+
+.footericon:hover {
+    transition: .3s ease-in;
+    cursor: pointer;
+    color: #000;
+}
+
+/* tablet responsive */
+@media only screen and (max-width:768px) {
+    .contactusicon {
+        left: 43%;
+    }
+
+    .carousel-img {
+        height: auto !important;
+    }
+
+    .bg-left {
+        height: 51vh;
+    }
+}
+
+/* mobile responsive */
+@media only screen and (max-width:430px) {
+    .contactusicon {
+        left: 39%;
+    }
+}
