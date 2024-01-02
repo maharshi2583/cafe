@@ -1,3 +1,24 @@
+// chef social links height width set when page reload
+let changeImgHW = () => {
+  let chefImg = document.getElementsByClassName("chefimg")[0];
+  let chefImgHeight = chefImg.offsetHeight;
+  let chefImgWidth = chefImg.offsetWidth;
+
+  let chefsocial1 = document.getElementsByClassName("chefsocial")[0];
+  chefsocial1.style.height = chefImgHeight - 8 + "px";
+  chefsocial1.style.width = chefImgWidth - 8 + "px";
+
+  let chefsocial2 = document.getElementsByClassName("chefsocial")[1];
+  chefsocial2.style.height = chefImgHeight - 8 + "px";
+  chefsocial2.style.width = chefImgWidth - 8 + "px";
+
+  let chefsocial3 = document.getElementsByClassName("chefsocial")[2];
+  chefsocial3.style.height = chefImgHeight - 8 + "px";
+  chefsocial3.style.width = chefImgWidth - 8 + "px";
+};
+window.addEventListener("resize", changeImgHW);
+changeImgHW();
+
 // loader
 const load = () => {
   document.getElementById("load").classList.add("d-none");
@@ -16,22 +37,6 @@ window.addEventListener("scroll", () => {
 jQuery("#offcanvasNavbar .navbar-nav a").click(function () {
   jQuery(".offcanvas").offcanvas("hide");
 });
-// chef social links height width set when page reload
-const chefImg = document.getElementsByClassName("chefimg")[0];
-const chefImgHeight = chefImg.offsetHeight;
-const chefImgWidth = chefImg.offsetWidth;
-
-const chefsocial1 = document.getElementsByClassName("chefsocial")[0];
-chefsocial1.style.height = chefImgHeight - 8 + "px";
-chefsocial1.style.width = chefImgWidth - 8 + "px";
-
-const chefsocial2 = document.getElementsByClassName("chefsocial")[1];
-chefsocial2.style.height = chefImgHeight - 8 + "px";
-chefsocial2.style.width = chefImgWidth - 8 + "px";
-
-const chefsocial3 = document.getElementsByClassName("chefsocial")[2];
-chefsocial3.style.height = chefImgHeight - 8 + "px";
-chefsocial3.style.width = chefImgWidth - 8 + "px";
 
 // carousel
 $(document).ready(function () {
